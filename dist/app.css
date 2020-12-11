@@ -6137,7 +6137,7 @@ readers do not read off random characters that represent icons */
 
 .container {
   margin: 0 auto;
-  width: 1100px;
+  width: 1170px;
 }
 
 .container::after {
@@ -6216,8 +6216,76 @@ footer {
   color: black;
 }
 
-main {
-  height: 400px;
+/*JUMBOTRON*/
+.jubotron {
+  width: 100%;
+  height: 480px;
+  background-image: url("https://www.painterartist.com/static/ptr/images/home/bg-painter-home.jpg");
+  background-size: cover;
+}
+
+.jubotron .container {
+  height: 100%;
+  /*flex-par(justify-content/align-items)*/
+  display: flex;
+  justify-content: none;
+  align-items: center;
+}
+.jubotron .container .row {
+  width: 570px;
+}
+.jubotron .container .row > * {
+  padding-bottom: 40px;
+}
+
+.jubotron .logo {
+  width: 250px;
+}
+.jubotron .logo img {
+  width: 100%;
+}
+
+.jubotron p {
+  font-size: 21px;
+  color: black;
+}
+
+.price p {
+  color: #c70cb9;
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+.price p:first-child {
+  font-weight: bold;
+}
+
+.jumbo-button button:first-child {
+  border: 2px solid #000;
+  padding: 8px 30px;
+  margin-right: 20px;
+  text-transform: uppercase;
+  min-width: 150px;
+  background: black;
+  color: white;
+  font-size: 20px;
+}
+.jumbo-button button:first-child:hover {
+  opacity: 0.85;
+  cursor: pointer;
+}
+.jumbo-button button:last-child {
+  border: 2px solid #000;
+  padding: 8px 30px;
+  margin-right: 20px;
+  text-transform: uppercase;
+  min-width: 150px;
+  background: none;
+  color: black;
+  font-size: 20px;
+}
+.jumbo-button button:last-child:hover {
+  opacity: 0.85;
+  cursor: pointer;
 }
 
 /*FOOTER*/
@@ -6230,6 +6298,9 @@ footer .row {
 
 .footer-left img {
   padding: 15px;
+}
+.footer-left img:hover {
+  cursor: pointer;
 }
 
 .footer-right a {
