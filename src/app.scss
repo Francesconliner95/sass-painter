@@ -1,6 +1,13 @@
 @import 'partials/variables';
 @import 'partials/mixin';
 
+$fa-font-path: 'fontawesome';
+@import 'node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
+@import 'node_modules/@fortawesome/fontawesome-free/scss/brands';
+@import 'node_modules/@fortawesome/fontawesome-free/scss/regular';
+@import 'node_modules/@fortawesome/fontawesome-free/scss/solid';
+
+
 *{
     margin: 0;
     padding: 0;
@@ -30,8 +37,7 @@ footer{
 
 .info{
     float: right;
-    display: flex;
-    justify-content: space-between;
+    @include flex-par(space-between,none);
 
     div{
         padding: $spacing;
@@ -39,20 +45,15 @@ footer{
             color: $button-color;
         }
         a{
-            color: $tertiary-text-color;
-            font-size: $font-size-1;
-            text-decoration: none;
-            &:hover{
-                color: $primary-text-color;
-                text-decoration: underline;
-            }
+            @include link-style-1;
         }
     }
 }
 
 .header-bottom{
-    display: flex;
-    align-items: center;
+    /*flex-par(justify-content/align-items)*/
+    @include flex-par(none,center);
+
     .logo{
         width: 125px;
         img{
@@ -96,15 +97,26 @@ main{
 
 /*FOOTER*/
 
-footer{
-    display: flex;
-    justify-content: space-between;
+footer .row{
+    /*flex-par(justify-content/align-items)*/
+    @include flex-par(space-between,center);
 }
 
 .footer-left{
+    img{
+        padding: $spacing * 1.5;
+    }
 
 }
 
 .footer-right{
-
+    a{
+        @include link-style-1;
+        padding: $spacing;
+    }
+    span{
+        padding: $spacing;
+        color: $primary-text-color;
+        font-size: $font-size-1;
+    }
 }

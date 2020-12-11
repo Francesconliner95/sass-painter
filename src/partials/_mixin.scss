@@ -3,3 +3,19 @@
     display: table;
     clear: both;
 }
+
+@mixin link-style-1{
+        color: $tertiary-text-color;
+        font-size: $font-size-1;
+        text-decoration: none;
+        &:hover{
+            color: $primary-text-color;
+            text-decoration: underline;
+        }
+}
+
+@mixin flex-par($justify-content,$align-items){
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
